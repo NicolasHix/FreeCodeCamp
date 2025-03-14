@@ -1,0 +1,34 @@
+/* Container for each section, ensures aspect ratio and keeps content visible */
+section {
+    position: relative; /* Establishes a containing block for positioning */
+    max-width: 100%; /* Ensures the section takes up the full width */
+    margin: 0 auto; /* Centers the sections */
+    padding-bottom: 56.25%; /* Aspect ratio of 16:9 */
+    margin-bottom: 40px; /* Adds space between sections */
+}
+
+/* Ensures videos are responsive with proper aspect ratio */
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Position the iframe inside the container */
+    top: 0;
+    left: 0;
+    object-fit: contain; /* Ensures the video is fully visible without cropping */
+}
+
+/* Styles for text content in the section */
+section h2, section p {
+    position: relative; /* Make sure the text is positioned within the section */
+    z-index: 10; /* Makes sure the text stays on top of the iframe */
+    text-align: center; /* Center align text */
+    margin-top: 10px; /* Adds space above the text */
+}
+
+/* Optional: Add responsiveness to the container to control iframe size */
+main {
+    background-color: cyan;
+    text-align: center;
+    padding: 20px;
+}
+
